@@ -59,10 +59,11 @@ body {
 
 nav ul {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, auto);
   list-style-type: none;
   text-align: center;
   padding: 0;
+  gap: 1vw;
 }
 
 .nav__link {
@@ -112,7 +113,7 @@ nav ul a:hover {
   display: grid;
   height: 730px;
   align-items: center;
-  background: url(../Images/bg02.png) no-repeat;
+  background: url(../Images/bg02.png) no-repeat center;
   flex-direction: column;
   align-content: center;
   text-align: center;
@@ -274,6 +275,7 @@ nav ul a:hover {
 
 .fourth__container {
   display: flex;
+  justify-content: center;
   height: 600px;
 }
 
@@ -660,6 +662,8 @@ nav ul a:hover {
 /* EIGHT CONTAINER */
 .eight__container {
   height: 600px;
+  display: flex;
+  justify-content: center;
 }
 
 .eight__container img {
@@ -900,7 +904,7 @@ footer {
   margin-top: 0px;
 }
 
-.footer__item p {
+.footer__item a, .footer__item p {
   font-family: Montserrat;
   font-size: 14px;
   font-weight: normal;
@@ -912,13 +916,17 @@ footer {
   color: #fff;
   margin-bottom: 10px;
   margin-top: 10px;
+  text-decoration: none;
 }
 
 .footer__item {
   width: 280px;
   height: 200px;
 }
-
+.footer__item:first-child {
+    display: flex;
+    flex-direction: column;
+}
 .footer__media {
   margin-top: 20.4px;
   width: 136px;
